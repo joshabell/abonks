@@ -5,8 +5,6 @@
 let map;
 
 async function initMap() {
-
-
     const years = [
         {
             year: 2004,
