@@ -155,17 +155,19 @@ async function initMap() {
   });
 
   let year;
+
+  let i = 0;
   // The marker, positioned at Uluru
   for (year of years){
     console.log("YEAR: " + year.description);
-
     if (!year.missed){    
-    const marker = new AdvancedMarkerElement(
+        let marker = new AdvancedMarkerElement(
         {
             map: map,
             position: {lat: year.lat, lng: year.lng},
             title: year.description
         }
+       
     )
     }   
   }
