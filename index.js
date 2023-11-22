@@ -120,15 +120,16 @@ async function initMap() {
         },
         {
             year: 2020,
-            country: "Covid?",
+            country: "None. Covid. Comfort Food + Zoom",
             missed: true,
             description: "Covid, Zoom, Comfort Food"
         },
         {
             year: 2021,
-            country: "Covid?",
-            missed: true,
-            description: "Covid?"
+            country: "South Korea",
+            lat: 37.205,
+            lng: 127.987,
+            description: "2021 - Korean!"
         },
         {
             year: 2022,
@@ -176,6 +177,10 @@ async function initMap() {
   let tablearea = document.getElementById('thelist');
   for (year of years){
     let newrow = document.createElement("tr");
+    if (year.missed)
+    {
+        newrow.setAttribute("class", "table-info");
+    }
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
     let tdd1 = document.createTextNode(year.year.toString());
